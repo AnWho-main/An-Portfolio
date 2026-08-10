@@ -55,8 +55,8 @@ export const SkillsSection: React.FC = () => {
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-mono text-xs font-semibold transition-all duration-200 cursor-pointer ${isActive
-                    ? "bg-indigo-600 text-white dark:bg-accent-primary dark:text-bg-dark shadow-md shadow-indigo-500/20"
-                    : "bg-white dark:bg-bg-card text-slate-700 dark:text-txt-muted border border-slate-200 dark:border-border-dark hover:border-indigo-500 hover:text-slate-900 shadow-sm"
+                  ? "bg-indigo-600 text-white dark:bg-accent-primary dark:text-bg-dark shadow-md shadow-indigo-500/20"
+                  : "bg-white dark:bg-bg-card text-slate-700 dark:text-txt-muted border border-slate-200 dark:border-border-dark hover:border-indigo-500 hover:text-slate-900 shadow-sm"
                   }`}
               >
                 <IconComp className="w-4 h-4" />

@@ -70,8 +70,8 @@ export const TechUniverseVisual: React.FC = () => {
                       onClick={() => setSelectedNode(node.id)}
                       onMouseEnter={() => setSelectedNode(node.id)}
                       className={`w-14 h-14 rounded-full flex flex-col items-center justify-center transition-all duration-300 cursor-pointer shadow-md ${isSelected
-                          ? "bg-white dark:bg-bg-surface border-2 border-indigo-600 dark:border-accent-primary text-txt-main shadow-indigo-500/20 ring-4 ring-indigo-500/20 scale-110"
-                          : "bg-white dark:bg-bg-surface border border-slate-200 dark:border-border-dark text-slate-600 dark:text-txt-muted hover:border-indigo-500"
+                        ? "bg-white dark:bg-bg-surface border-2 border-indigo-600 dark:border-accent-primary text-txt-main shadow-indigo-500/20 ring-4 ring-indigo-500/20 scale-110"
+                        : "bg-white dark:bg-bg-surface border border-slate-200 dark:border-border-dark text-slate-600 dark:text-txt-muted hover:border-indigo-500"
                         }`}
                     >
                       <IconComp className="w-5 h-5 text-indigo-600 dark:text-accent-primary" />

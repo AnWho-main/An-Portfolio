@@ -8,10 +8,10 @@ import { Container } from "@/components/ui/container";
 
 export const AboutSection: React.FC = () => {
   const systemHighlights = [
-    { label: "Payment & Recharge Engines", desc: "BBPS, wallet transactions, ledger auditing, status callbacks" },
-    { label: "Email & SaaS Automation", desc: "Gmail OAuth2 sync, email sequences, cron background jobs" },
-    { label: "AI Agent Pipelines", desc: "Product price extraction, data normalization, image generators" },
-    { label: "Blockchain & Web3", desc: "Solidity BEP-20 contracts, royalty distributor vaults, wallet sync" },
+    { label: "Outreach & Email SaaS Modules", desc: "Gmail OAuth2 sync, email sequences, Redis scraper queues" },
+    { label: "Hotel Booking & Go-VIP Services", desc: "High-performance RESTful APIs, transactional security" },
+    { label: "Payment & Recharge Systems", desc: "BBPS integrations, automated settlement, audit ledgers" },
+    { label: "AI Agents & Web3 Applications", desc: "Autonomous task automation, Solidity BEP-20, DApp portals" },
   ];
 
   return (
@@ -26,32 +26,29 @@ export const AboutSection: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 flex flex-col"
           >
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-accent-primary font-bold tracking-wider uppercase mb-3">
-              <Server className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 font-mono text-xs text-sky-600 dark:text-accent-primary font-bold tracking-wider uppercase mb-3 bg-sky-50 dark:bg-sky-950/50 px-3 py-1 rounded-full border border-sky-200/60 dark:border-sky-800/60 self-start">
+              <Server className="w-4 h-4 text-sky-500" />
               <span>01 / ABOUT THE ENGINEER</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-txt-main tracking-tight mb-6">
-              Engineering Scalable Systems & High-Reliability Software
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-txt-main tracking-tight mb-4">
+              Software Engineer | Backend & Full-Stack Developer
             </h2>
 
-            <div className="space-y-4 text-txt-muted text-base leading-relaxed mb-8">
-              <p>
-                I am <span className="text-txt-main font-semibold">{profileData.name}</span>, a Software Engineer focused on building scalable web applications, backend systems, REST APIs, AI-powered solutions, automation platforms, and Web3 applications.
+            <div className="space-y-4 text-slate-600 dark:text-txt-muted text-base leading-relaxed mb-6">
+              <p className="text-lg font-medium text-slate-800 dark:text-txt-main">
+                Software Engineer with 3+ years of experience building scalable web applications, backend systems, REST APIs, integrations, AI-powered solutions and Web3 applications.
               </p>
               <p>
-                My core backend ecosystem is grounded in <span className="text-accent-primary font-mono font-medium">PHP, Laravel, CodeIgniter, and MySQL</span>. I architect production systems engineered for high transaction volume, complex business logic, asynchronous queued background jobs, and robust third-party API integrations.
-              </p>
-              <p>
-                Beyond standard backend APIs, I develop modern full-stack platforms with <span className="text-txt-main font-mono font-semibold">JavaScript and Next.js</span>, while extending software capabilities into autonomous AI agents, automated email sync engines, and EVM smart contracts on BNB Smart Chain.
+                My engineering focus centers on building reliable backend architectures with <span className="font-semibold text-slate-900 dark:text-txt-main font-mono">PHP, Laravel, MySQL, and Node.js</span>, while developing full-stack interfaces with <span className="font-semibold text-slate-900 dark:text-txt-main font-mono">JavaScript and Next.js</span>, and exploring intelligent <span className="font-semibold text-sky-600 dark:text-sky-400 font-mono">AI Agents</span> and <span className="font-semibold text-indigo-600 dark:text-indigo-400 font-mono">Web3 DApps</span>.
               </p>
             </div>
 
             {/* Core Capabilities Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-2">
               {profileData.corePositioning.map((item) => (
-                <div key={item} className="flex items-center gap-2.5 font-mono text-xs text-txt-main bg-slate-100 dark:bg-bg-elevated p-2.5 rounded-lg border border-slate-200 dark:border-border-dark shadow-sm">
-                  <CheckCircle2 className="w-4 h-4 text-indigo-600 dark:text-accent-primary shrink-0" />
+                <div key={item} className="flex items-center gap-2.5 font-mono text-xs text-slate-800 dark:text-txt-main bg-slate-50 dark:bg-bg-elevated p-3 rounded-xl border border-slate-200/80 dark:border-border-dark shadow-sm">
+                  <CheckCircle2 className="w-4 h-4 text-sky-500 shrink-0" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -66,26 +63,26 @@ export const AboutSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 space-y-4"
           >
-            <div className="rounded-xl bg-white dark:bg-bg-card border border-slate-200 dark:border-border-dark p-6 shadow-xl relative overflow-hidden">
+            <div className="rounded-2xl bg-white dark:bg-bg-card border border-sky-100 dark:border-border-dark p-6 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 p-4 opacity-10">
-                <Layers className="w-24 h-24 text-indigo-600 dark:text-accent-primary" />
+                <Layers className="w-24 h-24 text-sky-500" />
               </div>
 
-              <h3 className="font-bold text-lg text-txt-main mb-2 flex items-center gap-2">
-                <Zap className="w-5 h-5 text-indigo-600 dark:text-accent-primary" />
-                Systems I Build & Operate
+              <h3 className="font-bold text-lg text-slate-900 dark:text-txt-main mb-1 flex items-center gap-2">
+                <Zap className="w-5 h-5 text-sky-500" />
+                Proven Software Capabilities
               </h3>
-              <p className="text-slate-500 dark:text-txt-subtle text-xs mb-6 font-mono">
-                Production-focused software engineering across real-world business domains.
+              <p className="text-slate-500 dark:text-txt-subtle text-xs mb-5 font-mono">
+                Curated technical proof across production environments.
               </p>
 
               <div className="space-y-3">
                 {systemHighlights.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-3 rounded-lg bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark hover:border-indigo-500/50 dark:hover:border-accent-primary/50 transition-colors shadow-sm"
+                    className="p-3.5 rounded-xl bg-slate-50/80 dark:bg-bg-elevated border border-slate-200/80 dark:border-border-dark hover:border-sky-400 transition-colors shadow-sm"
                   >
-                    <div className="font-bold text-sm text-txt-main mb-0.5">{item.label}</div>
+                    <div className="font-bold text-sm text-slate-900 dark:text-txt-main mb-0.5">{item.label}</div>
                     <div className="text-xs text-slate-500 dark:text-txt-subtle font-mono">{item.desc}</div>
                   </div>
                 ))}

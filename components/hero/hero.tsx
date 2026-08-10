@@ -22,11 +22,8 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
 
       {/* Ambient Glow Effects */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-indigo-400/10 dark:bg-accent-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[450px] h-[280px] bg-blue-400/10 dark:bg-accent-glow/10 rounded-full blur-[120px] pointer-events-none" />
-      
-      {/* Soft Wave Decorator for Light Mode */}
-      <div className="absolute -bottom-28 -left-24 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-300/40 via-purple-200/30 to-sky-200/20 rounded-full blur-3xl pointer-events-none dark:hidden" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-sky-400/10 dark:bg-accent-primary/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[450px] h-[280px] bg-indigo-400/10 dark:bg-accent-glow/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -47,42 +44,39 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/90 dark:bg-bg-surface border border-slate-200 dark:border-border-dark font-mono text-xs text-slate-700 dark:text-txt-muted shadow-sm"
+              className="mb-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-50 dark:bg-bg-surface border border-slate-200 dark:border-border-dark font-mono text-xs text-slate-700 dark:text-txt-muted shadow-sm"
             >
-              <Terminal className="w-3.5 h-3.5 text-indigo-600 dark:text-accent-primary" />
+              <Terminal className="w-3.5 h-3.5 text-sky-500 dark:text-accent-primary" />
               <span>{profileData.tagline}</span>
             </motion.div>
 
-            {/* Main Headline with Gradient Highlights */}
+            {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-txt-main tracking-tight leading-[1.15] mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-txt-main tracking-tight leading-[1.15] mb-4"
             >
-              Hi, I’m Anshuman Singh Somvanshi — a Software Engineer building scalable web applications,{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 dark:from-sky-400 dark:to-indigo-400 bg-clip-text text-transparent">
-                AI-powered solutions
-              </span>
-              , backend{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 dark:from-sky-400 dark:to-indigo-400 bg-clip-text text-transparent">
-                systems
-              </span>
-              , and{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-sky-400 dark:to-indigo-400 bg-clip-text text-transparent">
-                blockchain applications
-              </span>
-              .
+              {profileData.name}
             </motion.h1>
 
-            {/* Supporting Tagline */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="text-xl sm:text-2xl font-bold text-sky-600 dark:text-accent-primary font-mono mb-6"
+            >
+              {profileData.subtitle}
+            </motion.h2>
+
+            {/* Concise Profile Intro */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-base sm:text-lg text-txt-muted font-normal leading-relaxed max-w-2xl mb-8"
+              className="text-base sm:text-lg text-slate-600 dark:text-txt-muted font-normal leading-relaxed max-w-2xl mb-8"
             >
-              {profileData.supportingIntro}
+              {profileData.primaryIntro}
             </motion.p>
 
             {/* Primary Action Buttons */}
@@ -97,7 +91,7 @@ export const HeroSection: React.FC = () => {
                 size="lg"
                 onClick={() => scrollTo("projects")}
                 icon={<ArrowRight className="w-4 h-4" />}
-                className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 dark:bg-none dark:bg-accent-primary dark:text-bg-dark"
+                className="bg-gradient-to-r from-sky-500 via-indigo-600 to-indigo-700 text-white shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 dark:bg-none dark:bg-accent-primary dark:text-bg-dark"
               >
                 View My Work
               </Button>
@@ -106,10 +100,10 @@ export const HeroSection: React.FC = () => {
                 variant="secondary"
                 size="lg"
                 onClick={() => scrollTo("contact")}
-                icon={<Code2 className="w-4 h-4 text-accent-primary" />}
-                className="bg-white dark:bg-bg-card text-txt-main border border-border-dark shadow-sm hover:border-accent-primary/40"
+                icon={<Code2 className="w-4 h-4 text-sky-500" />}
+                className="bg-white dark:bg-bg-card text-slate-900 dark:text-txt-main border border-slate-200 dark:border-border-dark shadow-sm hover:border-sky-400"
               >
-                Let’s Work Together
+                Let’s Build Something
               </Button>
             </motion.div>
 
@@ -119,14 +113,14 @@ export const HeroSection: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               onClick={() => scrollTo("about")}
-              className="inline-flex items-center gap-2 font-mono text-xs text-txt-subtle hover:text-accent-primary transition-colors cursor-pointer group"
+              className="inline-flex items-center gap-2 font-mono text-xs text-slate-500 dark:text-txt-subtle hover:text-sky-600 transition-colors cursor-pointer group"
             >
-              <span>Explore</span>
+              <span>Explore Profile</span>
               <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
             </motion.button>
           </div>
 
-          {/* Right Column - Engineering Architecture Visual */}
+          {/* Right Column - Architecture Hero Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}

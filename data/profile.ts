@@ -1,38 +1,31 @@
 export const profileData = {
   name: "Anshuman Singh Somvanshi",
   title: "Software Engineer",
+  subtitle: "Backend & Full-Stack Developer",
   shortName: "Anshuman",
   logoInitials: "AS²",
-  tagline: "Software Engineer → Backend Engineer → Full-Stack Systems → AI → Web3",
-  location: "Noida, India",
+  tagline: "Software Engineer → Backend + Full Stack + AI + Web3",
+  location: "Noida, Uttar Pradesh, India",
   primaryIntro:
-    "Hi, I’m Anshuman Singh Somvanshi — a Software Engineer building scalable web applications, AI-powered solutions, backend systems, and blockchain applications.",
+    "Software Engineer with 3+ years of experience building scalable web applications, backend systems, REST APIs, integrations, AI-powered solutions and Web3 applications.",
   supportingIntro:
-    "From backend architecture and APIs to AI automation and Web3 applications, I build reliable software designed for real-world use.",
+    "Curated proof of what I build: scalable backend services, high-throughput APIs, automated AI agents, and Web3 applications.",
   systemStatus: {
     status: "SYSTEM ONLINE",
     buildingItems: [
-      "Scalable Web Applications",
-      "AI-Powered Solutions",
-      "Backend Architecture & APIs",
-      "Web3 & Blockchain Systems",
-      "Automation Platforms",
+      "Scalable Backend Systems & APIs",
+      "AI Agents & Automation",
+      "Web3 & Smart Contracts",
+      "Full-Stack Applications",
     ],
   },
   corePositioning: [
     "Scalable Backend Systems",
     "High-Performance REST APIs",
-    "Payment & BBPS Integrations",
+    "Outreach & Email Sync Engines",
     "AI Agents & Automation",
     "Web3 & Smart Contracts",
-    "Database-Driven SaaS",
   ],
-  bioNarrative: `I am Anshuman Singh Somvanshi, a Software Engineer focused on building scalable web applications, backend systems, APIs, AI-powered solutions, automation platforms, and blockchain applications.
-
-My primary backend ecosystem is anchored in PHP, Laravel, CodeIgniter, and MySQL. I design production-ready backend architectures capable of executing complex business logic, background processing, email synchronization, and secure payment integrations.
-
-Beyond core backend systems, I actively build modern full-stack platforms using JavaScript, Next.js, and REST APIs, while engineering AI agents, automation pipelines, and decentralized Web3 applications on smart contract platforms like BSC.
-
-My experience spans mission-critical business systems involving Bharat Bill Payment System (BBPS), multi-provider payment gateways, OAuth mail connections, automated sync engines, and custom token distributions.`,
+  bioNarrative: `Software Engineer with 3+ years of experience building scalable web applications, backend systems, REST APIs, integrations, AI-powered solutions and Web3 applications. Focused on engineering high-performance systems with PHP, Laravel, Node.js, Next.js, Redis, and modern AI/Web3 frameworks.`,
   resumePath: "/resume/anshuman-singh-somvanshi-resume.pdf",
 };
