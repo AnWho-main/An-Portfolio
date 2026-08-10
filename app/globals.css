@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* True White Light Theme (Default) RGB Values & Colors */
+  --bg-dark-rgb: 255 255 255;          /* Pure White background #FFFFFF */
+  --bg-surface-rgb: 255 255 255;       /* Pure White surface #FFFFFF */
+  --bg-card-rgb: 255 255 255;          /* Pure White card #FFFFFF */
+  --bg-elevated-rgb: 248 250 252;      /* Light elevated badge/chip #F8FAFC */
+
+  --border-dark-color: #E5E7EB;        /* Border #E5E7EB */
+  --border-glow-color: rgba(99, 102, 241, 0.25);
+
+  --text-main-rgb: 15 23 42;           /* Primary heading: #0F172A */
+  --text-muted-rgb: 51 65 85;          /* Secondary text: #334155 */
+  --text-subtle-rgb: 100 116 139;       /* Muted text: #64748B */
+
+  --accent-primary-rgb: 79 70 229;     /* Accent: #4F46E5 */
+  --accent-glow-rgb: 99 102 241;       /* Accent: #6366F1 */
+  --accent-electric-rgb: 37 99 235;    /* Accent: #2563EB */
+  --accent-violet-rgb: 124 58 237;     /* Accent: #7C3AED */
+
+  --grid-line: rgba(15, 23, 42, 0.04);
+  --shadow-card-val: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.dark {
+  /* Dark Theme (Preserved Exactly) RGB Values & Colors */
+  --bg-dark-rgb: 7 9 14;
+  --bg-surface-rgb: 13 17 26;
+  --bg-card-rgb: 19 26 41;
+  --bg-elevated-rgb: 26 35 56;
+
+  --border-dark-color: rgba(255, 255, 255, 0.08);
+  --border-glow-color: rgba(56, 189, 248, 0.3);
+
+  --text-main-rgb: 248 250 252;
+  --text-muted-rgb: 148 163 184;
+  --text-subtle-rgb: 100 116 139;
+
+  --accent-primary-rgb: 56 189 248;
+  --accent-glow-rgb: 99 102 241;
+  --accent-electric-rgb: 0 240 255;
+  --accent-violet-rgb: 139 92 246;
+
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --shadow-card-val: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: rgb(var(--text-main-rgb));
+    font-family: var(--font-sans);
+    @apply antialiased selection:bg-indigo-500/20 dark:selection:bg-sky-500/30 selection:text-current min-h-screen flex flex-col transition-colors duration-300;
+  }
+
+  .dark body {
+    background-color: rgb(var(--bg-dark-rgb));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: rgb(var(--text-main-rgb));
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg-dark-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-dark-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--accent-primary-rgb));
+}
+
+/* Background Subtle Radial Gradient & Grid Pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.hero-gradient-overlay {
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.10), transparent 32%),
+    radial-gradient(circle at 85% 25%, rgba(59, 130, 246, 0.08), transparent 32%),
+    radial-gradient(circle at 50% 80%, rgba(139, 92, 246, 0.06), transparent 35%),
+    #ffffff;
+}
+
+.dark .hero-gradient-overlay {
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 80%),
+    #07090E;
+}
