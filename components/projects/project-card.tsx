@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { Project } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
 
@@ -38,12 +38,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
       <div>
         {/* Top Header Status & Category Badges */}
         <div className="flex items-center justify-between gap-2 mb-4">
-          <span className={`px-2.5 py-1 rounded-full font-mono text-[10px] font-extrabold uppercase tracking-wider border shadow-sm flex items-center gap-1.5 ${getStatusColor(project.status)}`}>
-            <span>{project.status}</span>
-            {project.progressVisual && (
-              <span className="font-mono text-[9px] opacity-80">{project.progressVisual}</span>
+          <div className="flex items-center gap-2">
+            <span className={`px-2.5 py-1 rounded-full font-mono text-[10px] font-extrabold uppercase tracking-wider border shadow-sm flex items-center gap-1.5 ${getStatusColor(project.status)}`}>
+              <span>{project.status}</span>
+              {project.progressVisual && (
+                <span className="font-mono text-[9px] opacity-80">{project.progressVisual}</span>
+              )}
+            </span>
+            {project.demoUrl && (
+              <span className="px-2 py-0.5 rounded-md font-mono text-[10px] font-bold bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 border border-sky-300 dark:border-sky-800 flex items-center gap-1">
+                <ExternalLink className="w-3 h-3" /> Live Link
+              </span>
             )}
-          </span>
+          </div>
           <Badge variant="outline" size="sm">
             {project.category}
           </Badge>

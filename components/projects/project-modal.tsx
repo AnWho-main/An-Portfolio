@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Github, AlertCircle, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
+import { X, Github, AlertCircle, CheckCircle2, ShieldCheck, ArrowRight, ExternalLink } from "lucide-react";
 import { Project } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -152,14 +152,25 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Modal Footer Actions */}
-          <div className="p-6 border-t border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-bg-surface flex items-center justify-between gap-4">
+          <div className="p-6 border-t border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-bg-surface flex flex-wrap items-center justify-between gap-4">
             <Link href={`/projects/${project.slug}`} passHref>
               <Button variant="secondary" size="sm" icon={<ArrowRight className="w-4 h-4" />}>
                 Dedicated Project Page
               </Button>
             </Link>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs font-mono font-bold text-white bg-indigo-600 dark:bg-accent-primary dark:text-bg-dark hover:bg-indigo-700 px-4 py-2 rounded-lg transition-colors shadow-sm"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Visit Live Project</span>
+                </a>
+              )}
               {project.githubUrl && (
                 <a
                   href={project.githubUrl}

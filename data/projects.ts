@@ -89,6 +89,7 @@ export const projectsData: Project[] = [
     ],
     outcome:
       "Delivered reliable Hotel Booking and Go-VIP backend services for EaseMyDeal users.",
+    demoUrl: "https://www.easemydeal.com/hotel-booking",
   },
   {
     slug: "recharge-bill-payment",
@@ -285,6 +286,7 @@ export const projectsData: Project[] = [
     ],
     outcome:
       "Completed personal freelancing platform delivering interactive education resource management.",
+    demoUrl: "https://udrcnet.org/",
   },
   {
     slug: "ecommerce-zyrohealthcare",
@@ -317,6 +319,7 @@ export const projectsData: Project[] = [
     ],
     outcome:
       "Completed full-stack healthcare e-commerce platform with production checkout capabilities.",
+    demoUrl: "https://zyrohealthcare.com",
   },
   {
     slug: "multi-admin-management",

@@ -82,7 +82,7 @@ export const ContactForm: React.FC = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Your Name"
+            placeholder="e.g. Alex Mercer"
             required
             className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors shadow-sm"
           />
@@ -97,7 +97,7 @@ export const ContactForm: React.FC = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Your Email"
+            placeholder="alex@company.com"
             required
             className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors shadow-sm"
           />
@@ -105,15 +105,37 @@ export const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label className="block text-xs font-mono text-slate-600 dark:text-txt-muted font-semibold mb-1.5">
-          SUBJECT
-        </label>
+        <div className="flex items-center justify-between mb-1.5">
+          <label className="block text-xs font-mono text-slate-600 dark:text-txt-muted font-semibold">
+            SUBJECT
+          </label>
+          <span className="text-[11px] font-mono text-slate-400 dark:text-txt-subtle">Quick Select Topic:</span>
+        </div>
+
+        {/* Quick Topic Chips */}
+        <div className="flex flex-wrap gap-1.5 mb-2">
+          {["Backend Architecture", "AI Agents & Automation", "Full-Stack App", "Consultation"].map((topic) => (
+            <button
+              key={topic}
+              type="button"
+              onClick={() => setFormData({ ...formData, subject: topic })}
+              className={`text-[11px] font-mono px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+                formData.subject === topic
+                  ? "bg-indigo-500/10 text-indigo-600 dark:text-accent-primary border-indigo-500/50"
+                  : "bg-slate-50 dark:bg-bg-elevated text-slate-600 dark:text-txt-muted border-slate-200 dark:border-border-dark hover:border-slate-300 dark:hover:border-sky-700"
+              }`}
+            >
+              + {topic}
+            </button>
+          ))}
+        </div>
+
         <input
           type="text"
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          placeholder="Subject"
+          placeholder="e.g. System Architecture / Consultation / Project Inquiry"
           className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors shadow-sm"
         />
       </div>
@@ -127,7 +149,7 @@ export const ContactForm: React.FC = () => {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Tell me about your project..."
+          placeholder="Tell me about your project goals, technical requirements, or inquiry..."
           required
           className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors resize-none shadow-sm"
         />

@@ -90,9 +90,9 @@ export const ContactSection: React.FC = () => {
 
           {/* Right Column: Contact Form Box */}
           <div className="lg:col-span-7 bg-white dark:bg-bg-card border border-slate-200 dark:border-border-dark rounded-2xl p-6 sm:p-8 shadow-xl shadow-[0_10px_30px_rgba(15,23,42,0.06)] dark:shadow-none">
-            <h3 className="text-xl font-bold text-txt-main mb-2">Send a Message</h3>
+            <h3 className="text-xl font-bold text-txt-main mb-1">Send a Message</h3>
             <p className="text-slate-500 dark:text-txt-subtle text-xs font-mono mb-6">
-              Messages dispatch directly to Anshuman&apos;s engineering inbox.
+              Direct dispatch to Anshuman&apos;s inbox — typical response within 24 hours.
             </p>
             <ContactForm />
           </div>

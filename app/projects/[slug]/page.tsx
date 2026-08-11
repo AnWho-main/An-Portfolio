@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProjectArchitectureDiagram } from "@/components/projects/project-architecture-diagram";
-import { ArrowLeft, Github, AlertCircle, CheckCircle2, ShieldCheck, Layers } from "lucide-react";
+import { ArrowLeft, Github, AlertCircle, CheckCircle2, ShieldCheck, Layers, ExternalLink } from "lucide-react";
 
 interface ProjectSlugPageProps {
   params: {
@@ -165,6 +165,18 @@ export default function ProjectSlugPage({ params }: ProjectSlugPageProps) {
               </div>
 
               <div className="pt-4 border-t border-border-dark space-y-3">
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-indigo-600 dark:bg-accent-primary dark:text-bg-dark text-white font-mono text-xs font-bold hover:bg-indigo-700 transition-colors shadow-sm"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>Visit Live Project</span>
+                  </a>
+                )}
+
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
