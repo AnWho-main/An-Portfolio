@@ -30,17 +30,25 @@ export const ResumeSection: React.FC = () => {
             <a
               href={profileData.resumePath}
               download="anshuman-singh-somvanshi-resume.pdf"
+            >
+              <Button variant="primary" size="lg" icon={<Download className="w-4 h-4" />}>
+                Download PDF Resume
+              </Button>
+            </a>
+
+            <a
+              href={profileData.resumePath}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="primary" size="lg" icon={<Download className="w-4 h-4" />}>
-                Download Resume
+              <Button variant="secondary" size="lg" icon={<Eye className="w-4 h-4 text-indigo-600 dark:text-accent-primary" />}>
+                View PDF Resume
               </Button>
             </a>
 
             <Link href="/resume" passHref>
-              <Button variant="secondary" size="lg" icon={<Eye className="w-4 h-4 text-indigo-600 dark:text-accent-primary" />}>
-                View Resume Page
+              <Button variant="secondary" size="lg" icon={<FileText className="w-4 h-4 text-sky-500" />}>
+                Detailed Resume Page
               </Button>
             </Link>
           </div>

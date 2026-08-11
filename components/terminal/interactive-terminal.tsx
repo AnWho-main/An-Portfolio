@@ -107,11 +107,11 @@ export const InteractiveTerminal: React.FC = () => {
       case "contact":
         outputNode = (
           <div className="text-slate-300">
-            Email: <span className="text-accent-primary">anshuman.somvanshi.dev@example.com</span>
+            Email: <span className="text-accent-primary">anshuman357main@gmail.com</span>
             <br />
-            LinkedIn: <span className="text-accent-primary">linkedin.com/in/anshumansomvanshi</span>
+            LinkedIn: <span className="text-accent-primary">linkedin.com/in/anshuman-singh-somvanshi-4a150b1bb</span>
             <br />
-            GitHub: <span className="text-accent-primary">github.com/anshumansomvanshi</span>
+            GitHub: <span className="text-accent-primary">github.com/AnWho-main</span>
           </div>
         );
         break;

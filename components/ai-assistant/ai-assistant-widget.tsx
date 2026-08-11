@@ -37,7 +37,7 @@ export const AIAssistantWidget: React.FC = () => {
     },
     {
       q: "How can I contact you?",
-      a: "You can send a message directly via the contact form on this site, or connect via LinkedIn (linkedin.com/in/anshumansomvanshi) or email (anshuman.somvanshi.dev@example.com).",
+      a: "You can send a message directly via the contact form on this site, or connect via LinkedIn (linkedin.com/in/anshuman-singh-somvanshi-4a150b1bb) or email (anshuman357main@gmail.com).",
     },
   ];
 

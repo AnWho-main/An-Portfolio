@@ -32,7 +32,7 @@ export const AboutSection: React.FC = () => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-txt-main tracking-tight mb-4">
-              Software Engineer | Backend & Full-Stack Developer
+              Software Engineer
             </h2>
 
             <div className="space-y-4 text-slate-600 dark:text-txt-muted text-base leading-relaxed mb-6">

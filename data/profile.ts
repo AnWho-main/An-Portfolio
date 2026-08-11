@@ -1,7 +1,7 @@
 export const profileData = {
   name: "Anshuman Singh Somvanshi",
   title: "Software Engineer",
-  subtitle: "Backend & Full-Stack Developer",
+  subtitle: "Software Engineer",
   shortName: "Anshuman",
   logoInitials: "AS²",
   tagline: "Software Engineer → Backend + Full Stack + AI + Web3",

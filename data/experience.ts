@@ -14,6 +14,28 @@ export interface ExperienceItem {
 
 export const experiences: ExperienceItem[] = [
   {
+    company: "Telgoo5",
+    location: "Noida, Uttar Pradesh, India",
+    role: "Software Engineer",
+    period: "June 2026 – Present",
+    badge: "CURRENT",
+    category: "Professional",
+    focusArea: [
+      "Billing & Fiber Management",
+      "Telecom Workflows",
+      "RESTful APIs",
+      "Service Lifecycle",
+    ],
+    description:
+      "Working on Billing and Fiber Management Systems, contributing to the development of scalable backend services and business workflows for telecom/service-management operations.",
+    keyResponsibilities: [
+      "Working on Billing and Fiber Management Systems, contributing to the development of scalable backend services and business workflows for telecom/service-management operations.",
+      "Developing and maintaining RESTful APIs and backend services for billing, service management, and related application workflows, with a focus on performance, reliability, and scalability.",
+      "Working on billing processes, service lifecycle management, and system integrations while ensuring reliable data processing and seamless communication between application modules.",
+    ],
+    technologies: ["Laravel", "PHP", "Node.js", "REST APIs", "MySQL", "JavaScript"],
+  },
+  {
     company: "Viral Pitch Technology Pvt. Ltd.",
     location: "Gurugram, Haryana",
     role: "Software Developer",

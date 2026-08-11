@@ -26,7 +26,7 @@ export const ContactSection: React.FC = () => {
               </h2>
 
               <p className="text-txt-muted text-sm leading-relaxed mb-8">
-                Have an idea, product, system, or technical challenge? Let’s discuss how I can help turn it into a reliable and scalable solution.
+                Have a project, idea, or opportunity in mind? Let&apos;s build something meaningful together.
               </p>
 
               {/* Direct Channels List */}
@@ -58,7 +58,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <div className="text-[11px] font-mono text-slate-500 dark:text-txt-subtle font-bold uppercase">LINKEDIN</div>
                     <div className="text-sm font-semibold text-txt-main group-hover:text-indigo-600 dark:group-hover:text-accent-primary transition-colors">
-                      linkedin.com/in/anshumansomvanshi
+                      linkedin.com/in/anshuman-singh-somvanshi-4a150b1bb
                     </div>
                   </div>
                 </a>
@@ -75,7 +75,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <div className="text-[11px] font-mono text-slate-500 dark:text-txt-subtle font-bold uppercase">GITHUB</div>
                     <div className="text-sm font-semibold text-txt-main group-hover:text-indigo-600 dark:group-hover:text-accent-primary transition-colors">
-                      github.com/anshumansomvanshi
+                      github.com/AnWho-main
                     </div>
                   </div>
                 </a>
