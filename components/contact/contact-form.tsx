@@ -82,7 +82,7 @@ export const ContactForm: React.FC = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="e.g. Alex Mercer"
+            placeholder="Your name pls..."
             required
             className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors shadow-sm"
           />
@@ -97,7 +97,7 @@ export const ContactForm: React.FC = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="alex@company.com"
+            placeholder="Your email / gmail address..."
             required
             className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors shadow-sm"
           />
@@ -135,7 +135,7 @@ export const ContactForm: React.FC = () => {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          placeholder="e.g. System Architecture / Consultation / Project Inquiry"
+          placeholder="Subject of your message..."
           className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors shadow-sm"
         />
       </div>
@@ -149,7 +149,7 @@ export const ContactForm: React.FC = () => {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Tell me about your project goals, technical requirements, or inquiry..."
+          placeholder="Tell me about your requirements..."
           required
           className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-bg-elevated border border-slate-200 dark:border-border-dark text-slate-900 dark:text-txt-main placeholder:text-slate-400 dark:placeholder:text-txt-subtle text-sm focus:outline-none focus:border-indigo-600 dark:focus:border-accent-primary transition-colors resize-none shadow-sm"
         />

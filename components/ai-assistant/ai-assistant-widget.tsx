@@ -16,28 +16,28 @@ export const AIAssistantWidget: React.FC = () => {
 
   const presetQuestions: QuestionAnswer[] = [
     {
+      q: "Where do you currently work?",
+      a: "Anshuman is currently working as a Software Engineer at Telgoo5 in Noida, India. He contributes to Billing and Fiber Management Systems, telecom operations, and scalable RESTful API services.",
+    },
+    {
+      q: "What is your professional experience?",
+      a: "Software Engineer with 3+ years of experience across Telgoo5 (CURRENT), Viral Pitch (Influencer Discovery & Redis scraper queues), EaseMyDeal (Hotel Booking & Go-VIP services), Digiature Technology (Web3 DApps), and Arudan Technologies.",
+    },
+    {
+      q: "Which projects have live links?",
+      a: "Live platforms include EaseMyDeal Hotel Booking (easemydeal.com/hotel-booking), UDRCNET Education Software (udrcnet.org), and Zyro Healthcare E-Commerce (zyrohealthcare.com). Repositories are on GitHub (github.com/AnWho-main).",
+    },
+    {
       q: "What technologies do you use?",
-      a: "Anshuman's core backend ecosystem includes PHP, Laravel, CodeIgniter, REST APIs, and MySQL. On the frontend, he builds reactive UIs with JavaScript and Next.js 14, and engineers AI agents as well as Web3 smart contracts on BSC.",
+      a: "Core stack includes PHP, Laravel, Node.js, Next.js 14, React.js, CodeIgniter, MySQL, Redis, REST APIs, AI Agents, Web3/Solidity smart contracts, Git, and GitHub Actions.",
     },
     {
-      q: "Tell me about your projects",
-      a: "Anshuman has engineered production systems such as a Recharge & Bill Payment Platform, BBPS API integration rails, an Outreach & Email Automation SaaS (Gmail OAuth + cron sync), an INDI Token distributor contract on BSC, and an AI price comparison agent.",
-    },
-    {
-      q: "What's your backend expertise?",
-      a: "Specialized in high-concurrency API endpoint design, MySQL schema normalization, query indexing, asynchronous background worker queues, OAuth2 authentication, and secure payment integrations (BBPS).",
-    },
-    {
-      q: "Tell me about your AI work",
-      a: "He designs AI agent frameworks capable of product data extraction across quick-commerce platforms (Blinkit/Zepto), unit-price normalization, and AI product background image generation pipelines.",
-    },
-    {
-      q: "Tell me about your Web3 work",
-      a: "Developed Solidity smart contracts for BEP-20 tokens on BSC Testnet, authoring automated royalty distribution vaults and integrating MetaMask wallet connectors into Next.js frontends.",
+      q: "Tell me about your AI & Web3 work",
+      a: "AI: Custom tool-calling agent frameworks, automated price comparison normalizers, and generative product asset pipelines. Web3: Solidity BEP-20 smart contracts, MetaMask wallet integration, and DApp admin portals.",
     },
     {
       q: "How can I contact you?",
-      a: "You can send a message directly via the contact form on this site, or connect via LinkedIn (linkedin.com/in/anshuman-singh-somvanshi-4a150b1bb) or email (anshuman357main@gmail.com).",
+      a: "You can send a message directly via the contact form on this site, or reach out via email (anshuman357main@gmail.com), LinkedIn (linkedin.com/in/anshuman-singh-somvanshi-4a150b1bb), or GitHub (github.com/AnWho-main).",
     },
   ];
 
