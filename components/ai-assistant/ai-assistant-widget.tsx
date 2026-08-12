@@ -221,7 +221,7 @@ export const AIAssistantWidget: React.FC = () => {
 
   const handleSelectQA = (qa: QuestionAnswer) => {
     const timeStr = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-    
+
     const userMsg: ChatMessage = {
       id: `u-${Date.now()}`,
       sender: "user",
@@ -320,18 +320,18 @@ export const AIAssistantWidget: React.FC = () => {
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.94 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-3 px-4 py-3 rounded-full bg-slate-900/90 dark:bg-bg-card/95 border border-indigo-500/40 dark:border-accent-primary/40 text-white dark:text-txt-main shadow-[0_10px_30px_rgba(79,70,229,0.3)] hover:shadow-[0_15px_35px_rgba(79,70,229,0.45)] backdrop-blur-md transition-all duration-300 cursor-pointer group"
+          className="flex items-center gap-3 px-4 py-3 rounded-full bg-white dark:bg-bg-card/95 border border-indigo-200/80 dark:border-accent-primary/40 text-slate-900 dark:text-txt-main shadow-lg shadow-indigo-500/15 hover:shadow-xl hover:shadow-indigo-500/25 dark:shadow-[0_10px_30px_rgba(79,70,229,0.3)] dark:hover:shadow-[0_15px_35px_rgba(79,70,229,0.45)] backdrop-blur-md transition-all duration-300 cursor-pointer group"
         >
           <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 dark:from-accent-primary dark:to-cyan-400 text-white dark:text-bg-dark font-bold shadow-sm">
             <Bot className="w-4 h-4" />
-            <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-slate-900 animate-pulse" />
+            <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-white dark:border-slate-900 animate-pulse" />
           </div>
           <div className="text-left font-mono leading-tight">
-            <div className="text-xs font-bold tracking-tight text-white dark:text-txt-main flex items-center gap-1.5">
+            <div className="text-xs font-bold tracking-tight text-slate-900 dark:text-txt-main flex items-center gap-1.5">
               <span>AS² AI Assistant</span>
-              <Sparkles className="w-3 h-3 text-amber-400 animate-spin-slow" />
+              <Sparkles className="w-3 h-3 text-amber-500 dark:text-amber-400 animate-spin-slow" />
             </div>
-            <div className="text-[10px] text-indigo-200/80 dark:text-txt-subtle font-sans">Ask About My Work</div>
+            <div className="text-[10px] text-slate-500 dark:text-txt-subtle font-sans">Ask About My Work</div>
           </div>
         </motion.button>
       </div>
@@ -344,25 +344,25 @@ export const AIAssistantWidget: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 25, scale: 0.95 }}
             transition={{ type: "spring", damping: 24, stiffness: 260 }}
-            className="fixed bottom-24 right-3 sm:right-6 z-50 w-[94vw] sm:w-[430px] bg-white/95 dark:bg-bg-card/95 backdrop-blur-xl border border-indigo-200/60 dark:border-border-dark rounded-3xl shadow-[0_25px_60px_rgba(15,23,42,0.25)] dark:shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col h-[580px] max-h-[82vh]"
+            className="fixed bottom-24 right-3 sm:right-6 z-50 w-[94vw] sm:w-[430px] bg-white/95 dark:bg-bg-card/95 backdrop-blur-xl border border-indigo-200/60 dark:border-border-dark rounded-3xl shadow-[0_25px_60px_rgba(15,23,42,0.15)] dark:shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col h-[580px] max-h-[82vh]"
           >
             {/* Header */}
-            <div className="p-4 bg-slate-900 text-white dark:bg-bg-surface dark:text-txt-main border-b border-indigo-900/40 dark:border-border-dark flex items-center justify-between shrink-0">
+            <div className="p-4 bg-white text-slate-900 dark:bg-bg-surface dark:text-txt-main border-b border-slate-200/80 dark:border-border-dark flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-xl bg-indigo-500/20 border border-indigo-400/40 text-indigo-400 dark:text-accent-primary">
+                <div className="p-2 rounded-xl bg-indigo-50 dark:bg-indigo-500/20 border border-indigo-200/60 dark:border-indigo-400/40 text-indigo-600 dark:text-accent-primary">
                   <Bot className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h4 className="font-mono text-xs font-bold tracking-wider uppercase text-white dark:text-txt-main">
+                    <h4 className="font-mono text-xs font-bold tracking-wider uppercase text-slate-900 dark:text-txt-main">
                       AS² AI ENGINEER ASSISTANT
                     </h4>
-                    <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                    <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-emerald-500/15 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 border border-emerald-500/30 dark:border-emerald-500/40">
                       LIVE
                     </span>
                   </div>
-                  <div className="text-[10px] text-slate-300 dark:text-txt-subtle font-mono flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-amber-400" />
+                  <div className="text-[10px] text-slate-500 dark:text-txt-subtle font-mono flex items-center gap-1">
+                    <Sparkles className="w-3 h-3 text-amber-500 dark:text-amber-400" />
                     <span>Local Engineering Knowledge Base</span>
                   </div>
                 </div>
@@ -373,14 +373,14 @@ export const AIAssistantWidget: React.FC = () => {
                   <button
                     onClick={handleClearChat}
                     title="Clear Conversation"
-                    className="p-2 rounded-xl text-slate-400 hover:text-rose-400 hover:bg-slate-800 dark:hover:bg-bg-elevated transition-colors cursor-pointer"
+                    className="p-2 rounded-xl text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-slate-100 dark:hover:bg-bg-elevated transition-colors cursor-pointer"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
                 )}
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-xl text-slate-400 hover:text-white dark:hover:text-txt-main hover:bg-slate-800 dark:hover:bg-bg-elevated transition-colors cursor-pointer"
+                  className="p-2 rounded-xl text-slate-400 hover:text-slate-900 dark:hover:text-txt-main hover:bg-slate-100 dark:hover:bg-bg-elevated transition-colors cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -396,11 +396,10 @@ export const AIAssistantWidget: React.FC = () => {
                   <button
                     key={cat.name}
                     onClick={() => setActiveCategory(cat.name)}
-                    className={`px-2.5 py-1 rounded-full text-[11px] font-mono whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer border ${
-                      isActive
+                    className={`px-2.5 py-1 rounded-full text-[11px] font-mono whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer border ${isActive
                         ? "bg-indigo-600 text-white dark:bg-accent-primary dark:text-bg-dark border-indigo-600 font-bold shadow-sm"
                         : "bg-white dark:bg-bg-elevated text-slate-600 dark:text-txt-muted border-slate-200 dark:border-border-dark hover:border-indigo-400/50"
-                    }`}
+                      }`}
                   >
                     <IconComponent className="w-3 h-3" />
                     <span>{cat.name}</span>
@@ -441,7 +440,7 @@ export const AIAssistantWidget: React.FC = () => {
                       </div>
                     ) : (
                       <div className="flex items-start gap-2">
-                        <div className="w-6 h-6 rounded-full bg-slate-900 text-white dark:bg-bg-surface border border-indigo-500/40 dark:border-accent-primary/40 flex items-center justify-center text-indigo-400 dark:text-accent-primary shrink-0 mt-1">
+                        <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 dark:bg-bg-surface dark:text-accent-primary border border-indigo-200/80 dark:border-accent-primary/40 flex items-center justify-center shrink-0 mt-1">
                           <Bot className="w-3.5 h-3.5" />
                         </div>
                         <div className="space-y-2 max-w-[85%]">
@@ -498,7 +497,7 @@ export const AIAssistantWidget: React.FC = () => {
               {/* Typing Indicator */}
               {isTyping && (
                 <div className="flex items-start gap-2">
-                  <div className="w-6 h-6 rounded-full bg-slate-900 dark:bg-bg-surface border border-indigo-500/40 text-indigo-400 flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 dark:bg-bg-surface dark:text-accent-primary border border-indigo-200/80 dark:border-accent-primary/40 flex items-center justify-center shrink-0 mt-1">
                     <Bot className="w-3.5 h-3.5" />
                   </div>
                   <div className="p-3 rounded-2xl bg-slate-100 dark:bg-bg-surface border border-slate-200 dark:border-border-dark text-slate-500 dark:text-txt-subtle font-mono text-[11px] flex items-center gap-2">
